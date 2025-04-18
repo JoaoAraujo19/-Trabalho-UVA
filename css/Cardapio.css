@@ -1,6 +1,11 @@
 *{
-    margin: 10px 5px  ;
+  margin: 10px 5px;
 }
+/* Background*/
+body{
+  background-color: rgb(255, 226, 189);
+}
+
 /* NavBar */
 header{
     display: flex;
@@ -18,9 +23,9 @@ ul{
 
 a{
     text-decoration: none;
-    color: black;
+    color: #5c2d00;
 }
-/* Box */
+/* Box*/
 h1 {
     color: rgb(255, 51, 0);
     text-align: center; 
@@ -41,7 +46,6 @@ h1 {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     width: 350px;
     height: 350px;
-  
     position: relative;
   }
   
@@ -56,6 +60,7 @@ h1 {
     color: rgb(255, 51, 0);
     text-align: center;
   }
+
   /* Box Acompanhamento*/
   .Acompanhamentos{
     color: rgb(255, 51, 0);
@@ -70,4 +75,26 @@ h1 {
     justify-content: center;
     margin-top: 40px;
 }
+  .card2{
+    background: #f6eee7;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 350px;
+    height: 350px;
+    position: relative;
+  }
+  .card2 img {
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    height: auto;
+    object-fit: cover;
+    
+  }
+  .card2 h3{
+    margin-top: 130px;
+    font-size: 1.5em;
+    color: rgb(255, 51, 0);
+    text-align: center;
+  }
   
