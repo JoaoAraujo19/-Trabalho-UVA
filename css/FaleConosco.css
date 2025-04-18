@@ -1,3 +1,7 @@
+*{
+    margin: 10px 5px  ;
+}
+/* NavBar */
 header{
     display: flex;
     justify-content: center;

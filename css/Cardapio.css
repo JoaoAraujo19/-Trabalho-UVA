@@ -1,3 +1,7 @@
+*{
+    margin: 10px 5px  ;
+}
+/* NavBar */
 header{
     display: flex;
     justify-content: center;
@@ -16,3 +20,54 @@ a{
     text-decoration: none;
     color: black;
 }
+/* Box */
+h1 {
+    color: rgb(255, 51, 0);
+    text-align: center; 
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: center;
+    margin-top: 40px;
+   
+  }
+  
+  .card {
+    background: #f6eee7;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 350px;
+    height: 350px;
+  
+    position: relative;
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .card h3 {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: rgb(255, 51, 0);
+    text-align: center;
+  }
+  /* Box Acompanhamento*/
+  .Acompanhamentos{
+    color: rgb(255, 51, 0);
+    margin-top: 100px;
+    text-align: center;
+    
+  }
+.acompanhamentos-section{
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: center;
+    margin-top: 40px;
+}
+  
