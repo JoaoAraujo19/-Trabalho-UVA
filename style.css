@@ -1,6 +1,7 @@
 *{
     margin: 10px 5px  ;
 }
+/* NavBar */
 header{
     display: flex;
     justify-content: center;
@@ -19,9 +20,4 @@ a{
     text-decoration: none;
     color: black;
 }
-h1{
-    color: rgb(255, 51, 0);
-    text-align: center;
-}
-
 
