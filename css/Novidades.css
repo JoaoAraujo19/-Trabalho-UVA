@@ -1,17 +1,15 @@
 *{
-    margin: 10px 5px  ;
+    margin: 10px 0px;
 }
 /* Background*/
 body{
     background-color: rgb(255, 226, 189);
-  }
-  
+}
+
 /* NavBar */
 header{
     display: flex;
     justify-content: center;
-    
-    
 }
 
 ul{
