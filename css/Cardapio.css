@@ -1,26 +1,29 @@
-* {
-  margin: 10px 0px;
+*{
+  margin: 0px 0px;
 }
-
 /* Background*/
-body {
+body{
   background-color: rgb(255, 226, 189);
+  
 }
 
 /* NavBar */
-header {
+header{
   display: flex;
   justify-content: center;
+  margin: 10px 0px;
+  margin-top: 50px;
+  margin-bottom: 60px;
 }
 
-ul {
+ul{
   list-style: none;
   display: flex;
   gap: 100px;
-
+  
 }
 
-a {
+a{
   text-decoration: none;
   color: #5c2d00;
   font-size: 20px;
@@ -207,6 +210,50 @@ h1 {
   margin-top: 100px;
   text-align: center;
 }
+/* footer */
+footer{
+  background-color: black;
+  margin: auto;
+  padding: 50px;
+  height: 100;
+}    
+footer .container{
+  display: flex;
+  color: #fff;
+ 
+ 
+}
+footer .container ul{
+  width: 25%;
+  display: block;
+}
+footer .container h2{
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+footer .container .redes-sociais img{
+  margin-right: 10px;
+}
+footer .container ul > p{
+  margin-bottom: 40px;
+}
+footer .container li{
+  margin: 10px 0;
+  
+}
+footer .container a{
+  color: #fff;
+  font-size: 16px;
+  transition: opacity 0.2s ease-in-out;
+}
+footer .container p{
+  color: #fff;
+  font-size: 16px;
+  
+}
+footer .container a:hover{
+  opacity: 0.4;
+}
 
 
 /* Responsividade*/
@@ -217,17 +264,20 @@ h1 {
     flex-direction: column;
     align-items: center;
   }
-
-
   .card,
   .card2 {
     flex-basis: 100%;
     width: auto;
   }
-}
-@media screen and (max-width: 768px) {
   .carrossel {
-      height: 400px;
-  }
+    height: 400px;
+}
+footer .container{
+  flex-direction: column;
+}
+footer .container ul{
+  width: 100%;
+  margin-bottom: 30px;
+}
 }
 
