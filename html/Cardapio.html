@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/logoGsemCirculo.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/Cardapio.css">
+    <script defer src="../index.js"></script>
     <title>Empresa</title>
 </head>
 
@@ -20,24 +22,51 @@
         </nav>
     </header>
     <main>
-        <div class="imagem-destaque">
-            <img src="../img/SuperMegaBlaster.png" alt="">
+        <div class="carrossel">
+            <div class="list">
+                <div class="item">
+                    <img src="../img/SuperMegaBlasterINICIAL2160x1080.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="https://blog.simpliza.com.br/wp-content/uploads/2023/11/propaganda-para-hamburgueria-dicas-marketing.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7e55BIrYgvLpzyaOiiM7XuUT1fRt0U_1gzA&s" alt="">
+                </div>
+                <div class="item">
+                    <img src="https://www.emporiotambo.com.br/pub/media/resized/1300x800/ves/blog/xCAPA._amirali-mirhashemian-jh5XyK4Rr3Y-unsplash.jpg.pagespeed.ic.jD-bhWDMfW.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="../img/SuperMegaBlasterINICIAL2160x1080.png" alt="">
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="prev">&lt</button>
+                <button id="next">&gt</button>
+            </div>
+            <ul class="dots">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
         </div>
         <h1>Hambúrguer</h1>
         <div class="card-container">
             <div class="card">
 
-                <a href="#">
-                    <img src="https://d3sn2rlrwxy0ce.cloudfront.net/Cheeseburger_duplo-thumb.png?mtime=20230202110228&focal=none"
+                <a href="naoseiburguer.html">
+                    <img src="../img/NaoSei400x400.png"
                         alt="BK Taste">
                 </a>
-                <h3>Pica das Galaxias</h3>
+                <h3>Não Sei</h3>
             </div>
 
             <div class="card">
 
-                <a href="#">
-                    <img src="https://d3sn2rlrwxy0ce.cloudfront.net/Cheeseburger_duplo-thumb.png?mtime=20230202110228&focal=none"
+                <a href="supermegaburguer.html">
+                    <img src="../img/SuperMegaBlaster400x400.png"
                         alt="BK Taste 2.0">
                 </a>
                 <h3>Supermega Blaster</h3>
@@ -45,8 +74,8 @@
 
             <div class="card">
 
-                <a href="#">
-                    <img src="https://d3sn2rlrwxy0ce.cloudfront.net/Cheeseburger_duplo-thumb.png?mtime=20230202110228&focal=none"
+                <a href="algumacoisaburguer.html">
+                    <img src="../img/AlgumaCoisa400x400.png"
                         alt="BK Taste 3.0">
                 </a>
                 <h3>Alguma Coisa</h3>
@@ -56,7 +85,7 @@
         <div class="acompanhamentos-section">
             <div class="card2">
 
-                <a href="#">
+                <a href="nugget.html">
                     <img src="https://d3sn2rlrwxy0ce.cloudfront.net/Onion-Rings-thumb_2021-09-16-164850_zyvn.png?mtime=20210916164851&focal=none"
                         alt="#">
                 </a>
@@ -64,7 +93,7 @@
             </div>
             <div class="card2">
 
-                <a href="#">
+                <a href="batatafrita.html">
                     <img src="https://d3sn2rlrwxy0ce.cloudfront.net/Batata-Frita-thumb.png?mtime=20210916164008&focal=none"
                         alt="BK Taste 3.0">
                 </a>
@@ -72,7 +101,7 @@
             </div>
             <div class="card2">
 
-                <a href="#">
+                <a href="batatamaluca.html">
                     <img src="https://d3sn2rlrwxy0ce.cloudfront.net/Balde_de_Batata.png?mtime=20231129125701&focal=none"
                          alt="#">
                 </a>
@@ -84,8 +113,17 @@
             <div class="card">
 
                 <a href="#">
+                    <img src="https://www.guaranaantarctica.com.br/sites/g/files/wnfebl12341/files/styles/webp/public/paragraphs/product_size/2021-05/200.png.webp?itok=a4h1jdyt"
+                        alt="guarana antartica">
+                </a>
+                <h3>Guaraná Antartica</h3>
+            </div>
+
+            <div class="card">
+
+                <a href="#">
                     <img src="https://www.jauserve.com.br/dw/image/v2/BFJL_PRD/on/demandware.static/-/Sites-jauserve-master/default/dw699632d5/78908901.png?sw=360&sfrm=png&sm=fit&q=80"
-                        alt="#">
+                        alt="coca cola">
                 </a>
                 <h3>Coca Cola</h3>
             </div>
@@ -93,24 +131,47 @@
             <div class="card">
 
                 <a href="#">
-                    <img src="https://www.jauserve.com.br/dw/image/v2/BFJL_PRD/on/demandware.static/-/Sites-jauserve-master/default/dw699632d5/78908901.png?sw=360&sfrm=png&sm=fit&q=80"
-                        alt="#">
+                    <img src="https://superprix.vteximg.com.br/arquivos/ids/174662/Refresco-Guaravita-Tradicional-290ml.png?v=636216333713330000"
+                        alt="guaravita">
                 </a>
-                <h3>Coca Cola</h3>
-            </div>
-
-            <div class="card">
-
-                <a href="#">
-                    <img src="https://www.jauserve.com.br/dw/image/v2/BFJL_PRD/on/demandware.static/-/Sites-jauserve-master/default/dw699632d5/78908901.png?sw=360&sfrm=png&sm=fit&q=80"
-                        alt="#">
-                </a>
-                <h3>Coca Cola</h3>
+                <h3>Guaravita</h3>
             </div>
         </div><!--FIM-Bebidas-->
             
             
     </main>
+    <footer>
+        <div class="container">
+            <ul>
+                <h2>Chapa Quente</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit1</p>
+                <div class="redes-sociais">
+                    <img src="#" alt="">
+                    <img src="#" alt="">
+                    <img src="#" alt="">
+                    <img src="#" alt="">
+                </div>
+            </ul>
+            <ul>
+                <h2>Link</h3>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">Preços</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+              
+            </ul>
+            <ul>
+                <h2>Suporte</h3>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Fundadores</a></li>
+                <li><a href="#">Como Funciona</a></li>
+            </ul>
+            <ul>
+                <h2>Nos Contacte</h3>
+                <li><p>+55 4002-8922</p></li>
+                <li><p>empresa@gmail.com</p></li>
+                <li><p>BRASIL</p></li>
+            </ul>
+        </div>
+    </footer>
 </body>
-
 </html>
