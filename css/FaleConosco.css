@@ -93,7 +93,7 @@ footer .container{
   display: flex;
   color: #fff;
  
- 
+  margin-bottom: 150px;
 }
 footer .container ul{
   width: 25%;
