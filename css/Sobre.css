@@ -1,17 +1,19 @@
 *{
-    margin: 10px 5px  ;
+    margin: 0px 0px;
 }
 /* Background*/
 body{
     background-color: rgb(255, 226, 189);
-  }
-  
+    
+}
+
 /* NavBar */
 header{
     display: flex;
     justify-content: center;
-    
-    
+    margin: 10px 0px;
+    margin-top: 50px;
+    margin-bottom: 60px;
 }
 
 ul{
@@ -25,4 +27,59 @@ a{
     text-decoration: none;
     color: #5c2d00;
     font-size: 20px;
+}
+/* footer */
+footer{
+    background-color: black;
+    margin: auto;
+    padding: 50px;
+    height: 100;
+}    
+footer .container{
+    display: flex;
+    color: #fff;
+   
+   
+}
+footer .container ul{
+    width: 25%;
+    display: block;
+}
+footer .container h2{
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+footer .container .redes-sociais img{
+    margin-right: 10px;
+}
+footer .container ul > p{
+    margin-bottom: 40px;
+}
+footer .container li{
+    margin: 10px 0;
+    
+}
+footer .container a{
+    color: #fff;
+    font-size: 16px;
+    transition: opacity 0.2s ease-in-out;
+}
+footer .container p{
+    color: #fff;
+    font-size: 16px;
+    
+}
+footer .container a:hover{
+    opacity: 0.4;
+}
+/* Resposividade */
+@media screen and (max-width: 768px) {
+    
+    footer .container{
+        flex-direction: column;
+    }
+    footer .container ul{
+        width: 100%;
+        margin-bottom: 30px;
+    }
 }

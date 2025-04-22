@@ -1,40 +1,113 @@
-* {
-  margin: 10px 0px;
+*{
+  margin: 0px 0px;
 }
-
 /* Background*/
-body {
+body{
   background-color: rgb(255, 226, 189);
+  
 }
 
 /* NavBar */
-header {
+header{
   display: flex;
   justify-content: center;
+  margin: 10px 0px;
+  margin-top: 50px;
+  margin-bottom: 60px;
 }
 
-ul {
+ul{
   list-style: none;
   display: flex;
   gap: 100px;
-
+  
 }
 
-a {
+a{
   text-decoration: none;
   color: #5c2d00;
   font-size: 20px;
 }
-/* Imagem Destaque */
-.imagem-destaque{
-  width: 100%; 
-  overflow: hidden; /* Oculta qualquer parte da imagem que possa ultrapassar */
+/* Carrossel */
+.carrossel {
+  width: 100%;
+  max-width: 100vw;
+  height: 990px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
 }
-.imagem-destaque img{
-  display: block; /* Remove espaços extras abaixo da imagem */
-  width: 100%; 
-  height: auto; 
+
+.carrossel .list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: max-content;
+  height: 100%;
+  display: flex;
+  transition: transform 0.5s ease-in-out; 
 }
+
+.carrossel .list .item {
+  width: 100vw; 
+  flex-shrink: 0; 
+}
+
+.carrossel .list .item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: fill; 
+}
+
+.carrossel .buttons {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.carrossel .buttons button {
+  background: none;
+  color: #fff;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  padding: 10px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.carrossel .buttons button:hover {
+  opacity: 1;
+}
+
+.carrossel .dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.carrossel .dots li {
+  list-style: none;
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carrossel .dots li.active {
+  background-color: #fff;
+}
+
 
 /* Box Hamburguer */
 h1 {
@@ -137,9 +210,53 @@ h1 {
   margin-top: 100px;
   text-align: center;
 }
+/* footer */
+footer{
+  background-color: black;
+  margin: auto;
+  padding: 50px;
+  height: 100;
+}    
+footer .container{
+  display: flex;
+  color: #fff;
+ 
+ 
+}
+footer .container ul{
+  width: 25%;
+  display: block;
+}
+footer .container h2{
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+footer .container .redes-sociais img{
+  margin-right: 10px;
+}
+footer .container ul > p{
+  margin-bottom: 40px;
+}
+footer .container li{
+  margin: 10px 0;
+  
+}
+footer .container a{
+  color: #fff;
+  font-size: 16px;
+  transition: opacity 0.2s ease-in-out;
+}
+footer .container p{
+  color: #fff;
+  font-size: 16px;
+  
+}
+footer .container a:hover{
+  opacity: 0.4;
+}
 
 
-/* Media Queries para telas menores */
+/* Responsividade*/
 @media (max-width: 768px) {
 
   .card-container,
@@ -147,12 +264,20 @@ h1 {
     flex-direction: column;
     align-items: center;
   }
-
-
   .card,
   .card2 {
     flex-basis: 100%;
     width: auto;
   }
+  .carrossel {
+    height: 400px;
+}
+footer .container{
+  flex-direction: column;
+}
+footer .container ul{
+  width: 100%;
+  margin-bottom: 30px;
+}
 }
 
