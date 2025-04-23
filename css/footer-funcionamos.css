@@ -5,6 +5,10 @@
 body{
     background-color: rgb(255, 226, 189);
     
+    
+}
+main{
+    margin: 10px 0px;
 }
 
 /* NavBar */
@@ -28,6 +32,26 @@ a{
     color: #5c2d00;
     font-size: 20px;
 }
+
+  /* Como Funciona */
+  .box-texto {
+    border: 2px solid black;
+    padding: 20px;
+    margin: auto ;
+    width: 600px; 
+    height: 300px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: justify; 
+    background-image: url(https://cms-blog.saipos.com/BANNER-NOMES-HAMBURGUERIA.jpg);
+  }
+  
+  .box-texto p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #5c2d00;
+  }
 /* footer */
 footer{
     background-color: black;
@@ -39,8 +63,6 @@ footer{
 footer .container{
     display: flex;
     color: #fff;
-   
-   
 }
 footer .container ul{
     width: 25%;
@@ -73,9 +95,9 @@ footer .container p{
 footer .container a:hover{
     opacity: 0.4;
 }
-/* Responsividade */
+
+
 @media screen and (max-width: 768px) {
-    
     footer .container{
         flex-direction: column;
     }

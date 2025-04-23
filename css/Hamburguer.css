@@ -71,6 +71,11 @@
     flex: 1; 
     text-align: center; 
   }
+  .imagem p{
+    color: #e63946;
+    font-size: 24px;
+    font-weight: bold;
+  }
   
   .imagem img {
     max-width: 100%; 
