@@ -234,6 +234,11 @@ footer .container h2{
 footer .container .redes-sociais img{
   margin-right: 10px;
 }
+footer .container .redes-sociais img{
+  width: 35px;
+  height: auto;
+}
+
 footer .container ul > p{
   margin-bottom: 40px;
 }
@@ -254,7 +259,6 @@ footer .container p{
 footer .container a:hover{
   opacity: 0.4;
 }
-
 
 /* Responsividade*/
 @media (max-width: 768px) {

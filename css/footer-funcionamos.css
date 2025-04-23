@@ -4,12 +4,8 @@
 /* Background*/
 body{
     background-color: rgb(255, 226, 189);
-    
-    
 }
-main{
-    margin: 10px 0px;
-}
+
 
 /* NavBar */
 header{
@@ -34,35 +30,33 @@ a{
 }
 
   /* Como Funciona */
-  .box-texto {
-    border: 2px solid black;
-    padding: 20px;
-    margin: auto ;
-    width: 600px; 
-    height: 300px; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    text-align: justify; 
-    background-image: url(https://cms-blog.saipos.com/BANNER-NOMES-HAMBURGUERIA.jpg);
-  }
-  
-  .box-texto p {
-    font-size: 18px;
-    line-height: 1.5;
-    color: #5c2d00;
-  }
+.imagem{
+    width: 100%;
+    max-width: 100vw;
+    height: 990px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+.imagem img{
+    width: 100%;
+    height: 100%;
+    
+}
+   
+
 /* footer */
 footer{
     background-color: black;
     margin: auto;
     padding: 50px;
     height: 100;
-    margin-top: 250px;
 }    
 footer .container{
     display: flex;
     color: #fff;
+   
+   
 }
 footer .container ul{
     width: 25%;
@@ -75,6 +69,11 @@ footer .container h2{
 footer .container .redes-sociais img{
     margin-right: 10px;
 }
+footer .container .redes-sociais img{
+    width: 35px;
+    height: auto;
+}
+
 footer .container ul > p{
     margin-bottom: 40px;
 }
@@ -98,6 +97,10 @@ footer .container a:hover{
 
 
 @media screen and (max-width: 768px) {
+    .imagem {
+        
+        height: 400px;
+    }
     footer .container{
         flex-direction: column;
     }

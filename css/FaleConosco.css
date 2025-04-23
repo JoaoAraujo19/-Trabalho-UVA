@@ -82,9 +82,11 @@ form {
   /* footer */
   footer{
     background-color: black;
+    margin: auto;
     padding: 50px;
-    height: 100px;
+    height: 100;
     margin-top: 250px;
+    
 }    
 footer .container{
     display: flex;
@@ -103,6 +105,11 @@ footer .container h2{
 footer .container .redes-sociais img{
     margin-right: 10px;
 }
+footer .container .redes-sociais img{
+    width: 35px;
+    height: auto;
+}
+
 footer .container ul > p{
     margin-bottom: 40px;
 }
