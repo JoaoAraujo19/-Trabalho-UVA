@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="../img/icones/logoGsemCirculo.png" type="image/x-icon">
+        <link rel="stylesheet" href="../css/Cardapio.css">
+        <script defer src="../../index.js"></script>
+        <script defer src="../js/carrinho.js"></script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../img/icones/logoGsemCirculo.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/Cardapio.css">
-    <script defer src="../index.js"></script>
-    <title>Empresa</title>
-</head>
-
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="../index.html">inicio</a></li>
-                <li><a href="Cardapio.html">Cardapio</a></li>
-                <li><a href="Novidades.html">Novidades</a></li>
-                <li><a href="FaleConosco.html">Fale Conosco</a></li>
-                <li><section id="carrinho-section">
-                    <img src="../img/icones/icons8-carrinho-de-compras-60.png" alt="">
-                    <div id="carrinho"></div>
-                    <button onclick="enviarCarrinho()">Finalizar Pedido</button>
-                </section>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div class="carrossel">
-            <div class="list">
+        <title>Empresa</title>
+    </head>
+    
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">inicio</a></li>
+                    <li><a href="Cardapio.html">Cardapio</a></li>
+                    <li><a href="Novidades.html">Novidades</a></li>
+                    <li><a href="FaleConosco.html">Fale Conosco</a></li>
+                </ul>
+            </nav>
+            <div id="icone-carrinho" onclick="window.location.href='carrinho.html'">
+                <img src="../img/icones/icons8-carrinho-de-compras-60.png" alt="Carrinho" >
+                <span id="contador-carrinho">0</span>
+             </div>
+        </header>
+        <main>
+            <div class="carrossel">
+                <div class="list">
                 <div class="item">
                     <img src="../img/slide/melhordorio.png" alt="">
                 </div>
@@ -54,10 +54,10 @@
         <h1>Hambúrguer</h1>
         <div class="card-container">
             <div class="card">
-
+                
                 <a href="../html/hamburguer/naoseiburguer.html">
                     <img src="../img/itens/NaoSei400x400.png"
-                        alt="NaoSeiBurguer">
+                    alt="NaoSeiBurguer">
                 </a>
                 <h3>Não Sei</h3>
                 <button onclick="adicionarAoCarrinho('Não sei Burguer')">Adicionar ao Carrinho</button>
@@ -109,8 +109,8 @@
                     <img src="../img/itens/caixacebola.png"
                          alt="#">
                 </a>
-                <h3>Anél de Cebola</h3>
-                <button onclick="adicionarAoCarrinho('Anéis de cebola')">Adicionar ao Carrinho</button>
+                <h3>Anéis de Cebola</h3>
+                <button onclick="adicionarAoCarrinho('Anéis de Cebola')">Adicionar ao Carrinho</button>
             </div>
           </div><!--FIm-acompanhamentos-->
           <h1 class="bebidas">Bebidas</h1>
@@ -180,84 +180,5 @@
         </div>
     </footer>
 </body>
-<script>
-    const precos = {
-    "Não sei Burguer": 18.00,
-    "Super Mega Blaster": 22.00,
-    "Alguma Coisa Burguer": 25.00,
-    "Nugget": 12.00,
-    "Batata Frita": 8.00,
-    "Anéis de Cebola": 10.00,
-    "Guaraná": 7.00,
-    "Coca Cola": 7.00,
-    "Guaravita": 3.00,
-};
 
-function mostrarTotal() {
-    const total = carrinho.reduce((soma, item) => {
-        return soma + (precos[item.nome] || 0) * item.quantidade;
-    }, 0);
-
-    const container = document.getElementById("carrinho");
-    const totalDiv = document.createElement("div");
-    totalDiv.innerHTML = `<strong>Total: R$ ${total.toFixed(2)}</strong>`;
-    container.appendChild(totalDiv);
-}
-
-
-    let carrinho = [];
-
-function adicionarAoCarrinho(nome) {
-    const existente = carrinho.find(item => item.nome === nome);
-
-    if (existente) {
-        existente.quantidade++;
-    } else {
-        carrinho.push({ nome, quantidade: 1 });
-    }
-
-    atualizarCarrinho();
-}
-
-function atualizarCarrinho() {
-    const container = document.getElementById("carrinho");
-    container.innerHTML = "";
-
-    carrinho.forEach(item => {
-        const linha = document.createElement("div");
-        linha.innerHTML = `
-            ${item.nome} x ${item.quantidade}
-            <button onclick="removerDoCarrinho('${item.nome}')">Remover</button>
-        `;
-        container.appendChild(linha);
-    });
-
-    mostrarTotal();
-}
-
-function removerDoCarrinho(nome) {
-    carrinho = carrinho.filter(item => item.nome !== nome);
-    atualizarCarrinho();
-}
-
-function enviarCarrinho() {
-    fetch('../php/salvar_carrinho.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(carrinho)
-    })
-    .then(response => response.text())
-    .then(data => {
-        alert("Pedido enviado!");
-        console.log(data); // pode mostrar msg do PHP
-        carrinho = [];
-        atualizarCarrinho();
-    })
-    .catch(error => console.error('Erro:', error));
-}
-
-
-</script>
 </html>
