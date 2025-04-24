@@ -18,6 +18,12 @@
                 <li><a href="Cardapio.html">Cardapio</a></li>
                 <li><a href="Novidades.html">Novidades</a></li>
                 <li><a href="FaleConosco.html">Fale Conosco</a></li>
+                <li><section id="carrinho-section">
+                    <img src="../img/icones/icons8-carrinho-de-compras-60.png" alt="">
+                    <div id="carrinho"></div>
+                    <button onclick="enviarCarrinho()">Finalizar Pedido</button>
+                </section>
+                </li>
             </ul>
         </nav>
     </header>
@@ -54,6 +60,7 @@
                         alt="NaoSeiBurguer">
                 </a>
                 <h3>Não Sei</h3>
+                <button onclick="adicionarAoCarrinho('Não sei Burguer')">Adicionar ao Carrinho</button>
             </div>
 
             <div class="card">
@@ -63,6 +70,7 @@
                         alt="SuperMegaBlasterBurguer">
                 </a>
                 <h3>Supermega Blaster</h3>
+                <button onclick="adicionarAoCarrinho('Super Mega Blaster')">Adicionar ao Carrinho</button>
             </div>
 
             <div class="card">
@@ -72,6 +80,7 @@
                         alt="AlgumaCoisaBurguer">
                 </a>
                 <h3>Alguma Coisa</h3>
+                <button onclick="adicionarAoCarrinho('Alguma Coisa Burguer')">Adicionar ao Carrinho</button>
             </div>
         </div><!--FIM-Container-->
         <h1 class="Acompanhamentos">Acompanhamentos</h1>
@@ -83,7 +92,7 @@
                         alt="#">
                 </a>
                 <h3>Nuggets de Frango</h3>
-                
+                <button onclick="adicionarAoCarrinho('Nugget')">Adicionar ao Carrinho</button>
             </div>
             <div class="card2">
 
@@ -92,6 +101,7 @@
                         alt="#">
                 </a>
                 <h3>Batata Frita</h3>
+                <button onclick="adicionarAoCarrinho('Batata Frita')">Adicionar ao Carrinho</button>
             </div>
             <div class="card2">
 
@@ -100,6 +110,7 @@
                          alt="#">
                 </a>
                 <h3>Anél de Cebola</h3>
+                <button onclick="adicionarAoCarrinho('Anéis de cebola')">Adicionar ao Carrinho</button>
             </div>
           </div><!--FIm-acompanhamentos-->
           <h1 class="bebidas">Bebidas</h1>
@@ -111,15 +122,17 @@
                         alt="guarana antartica">
                 </a>
                 <h3>Guaraná Antartica</h3>
+                <button onclick="adicionarAoCarrinho('Guaraná')">Adicionar ao Carrinho</button>
             </div>
 
             <div class="card">
 
                 <a href="#">
                     <img src="https://www.jauserve.com.br/dw/image/v2/BFJL_PRD/on/demandware.static/-/Sites-jauserve-master/default/dw699632d5/78908901.png?sw=360&sfrm=png&sm=fit&q=80"
-                        alt="coca cola">
+                        alt="Coca Cola">
                 </a>
                 <h3>Coca Cola</h3>
+                <button onclick="adicionarAoCarrinho('Coca Cola')">Adicionar ao Carrinho</button>
             </div>
 
             <div class="card">
@@ -129,6 +142,7 @@
                         alt="guaravita">
                 </a>
                 <h3>Guaravita</h3>
+                <button onclick="adicionarAoCarrinho('Guaravita')">Adicionar ao Carrinho</button>
             </div>
         </div><!--FIM-Bebidas-->
             
@@ -166,4 +180,84 @@
         </div>
     </footer>
 </body>
+<script>
+    const precos = {
+    "Não sei Burguer": 18.00,
+    "Super Mega Blaster": 22.00,
+    "Alguma Coisa Burguer": 25.00,
+    "Nugget": 12.00,
+    "Batata Frita": 8.00,
+    "Anéis de Cebola": 10.00,
+    "Guaraná": 7.00,
+    "Coca Cola": 7.00,
+    "Guaravita": 3.00,
+};
+
+function mostrarTotal() {
+    const total = carrinho.reduce((soma, item) => {
+        return soma + (precos[item.nome] || 0) * item.quantidade;
+    }, 0);
+
+    const container = document.getElementById("carrinho");
+    const totalDiv = document.createElement("div");
+    totalDiv.innerHTML = `<strong>Total: R$ ${total.toFixed(2)}</strong>`;
+    container.appendChild(totalDiv);
+}
+
+
+    let carrinho = [];
+
+function adicionarAoCarrinho(nome) {
+    const existente = carrinho.find(item => item.nome === nome);
+
+    if (existente) {
+        existente.quantidade++;
+    } else {
+        carrinho.push({ nome, quantidade: 1 });
+    }
+
+    atualizarCarrinho();
+}
+
+function atualizarCarrinho() {
+    const container = document.getElementById("carrinho");
+    container.innerHTML = "";
+
+    carrinho.forEach(item => {
+        const linha = document.createElement("div");
+        linha.innerHTML = `
+            ${item.nome} x ${item.quantidade}
+            <button onclick="removerDoCarrinho('${item.nome}')">Remover</button>
+        `;
+        container.appendChild(linha);
+    });
+
+    mostrarTotal();
+}
+
+function removerDoCarrinho(nome) {
+    carrinho = carrinho.filter(item => item.nome !== nome);
+    atualizarCarrinho();
+}
+
+function enviarCarrinho() {
+    fetch('../php/salvar_carrinho.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(carrinho)
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert("Pedido enviado!");
+        console.log(data); // pode mostrar msg do PHP
+        carrinho = [];
+        atualizarCarrinho();
+    })
+    .catch(error => console.error('Erro:', error));
+}
+
+
+</script>
 </html>
