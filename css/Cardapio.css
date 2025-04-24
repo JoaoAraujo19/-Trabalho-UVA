@@ -16,15 +16,26 @@ header{
   margin-bottom: 60px;
 }
 
-#carrinho-section {
-  text-align: center;
-  align-items: center;
-  margin: -40px 0px;
-  padding: 1rem;
-  margin-bottom: 60px;
-  
+#icone-carrinho{
+  position: relative; 
+  cursor: pointer;
+  margin-left: 50px;
 }
+#icone-carrinho img{
+  width: 40px;
+  height: auto;
 
+}
+#contador-carrinho{
+  position: absolute;
+  top: -8px; 
+  right: -8px; 
+  background: red; 
+  color: white; 
+  border-radius: 50%; 
+  padding: 2px 6px; 
+  font-size: 12px;
+}
 
 
 ul{
