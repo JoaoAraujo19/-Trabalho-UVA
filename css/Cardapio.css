@@ -16,6 +16,17 @@ header{
   margin-bottom: 60px;
 }
 
+#carrinho-section {
+  text-align: center;
+  align-items: center;
+  margin: -40px 0px;
+  padding: 1rem;
+  margin-bottom: 60px;
+  
+}
+
+
+
 ul{
   list-style: none;
   display: flex;
