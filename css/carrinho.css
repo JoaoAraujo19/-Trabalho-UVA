@@ -1,0 +1,55 @@
+*{
+    margin: 5px 5px;
+  }
+  /* Background*/
+  body{
+    background-color: rgb(255, 226, 189);
+    
+}
+  /* Discrição Hamburguer */
+.container-bk-taste {
+    display: flex;
+    flex-direction: column; 
+    font-family: sans-serif; 
+    background-color: rgb(255, 226, 189);
+    padding: 20px;
+  }
+  
+  .voltar a {
+    color: #e63946;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #lista-carrinho{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    
+  }
+
+button{
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    background-color: #e63946;
+    transition: 0.5s;
+}
+button:hover{
+    background-color: #bb1220;
+}
+.remove{
+    background-color: aliceblue;
+}
+img{
+    width: 30px;
+    height: auto;
+}
