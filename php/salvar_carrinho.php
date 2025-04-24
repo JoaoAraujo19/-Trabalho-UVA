@@ -5,7 +5,7 @@ if ($data) {
     session_start();
     $_SESSION['carrinho'] = $data;
 
-    // Aqui você poderia salvar no banco se quiser que nao sei o que
+    // Aqui você poderia salvar no banco
     echo "Carrinho salvo com sucesso!";
 } else {
     echo "Erro ao salvar o carrinho.";
