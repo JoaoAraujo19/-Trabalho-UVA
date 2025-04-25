@@ -5,8 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="../-Trabalho-UVA/img/icones/logoGsemCirculo.png" type="image/x-icon">
         <link rel="stylesheet" href="style.css"> 
-        <title>Empresa</title>
         <script defer src="../index.js"></script>
+        <script defer src="./js/carrinho.js"></script>
+        <title>Empresa</title>
 
     </head>
     <body>
@@ -17,6 +18,10 @@
                     <li><a href="./html/Cardapio.html">Cardapio</a></li>
                     <li><a href="./html/Novidades.html">Novidades</a></li>
                     <li><a href="./html/FaleConosco.html">Fale Conosco</a></li>
+                    <div id="icone-carrinho" onclick="window.location.href='./html/carrinho.html'">
+                       <img src="./img/icones/icons8-carrinho-de-compras-60.png" alt="Carrinho" >
+                       <span id="contador-carrinho">0</span>
+                   </div>
                  </ul>
             </nav>
         </header>

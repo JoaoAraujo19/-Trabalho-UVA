@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../img/icones/logoGsemCirculo.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/FaleConosco.css">
+    <script defer src="../js/carrinho.js"></script>
+    
     <title>Empresa</title>
 </head>
 
@@ -17,11 +19,15 @@
                 <li><a href="Cardapio.html">Cardapio</a></li>
                 <li><a href="Novidades.html">Novidades</a></li>
                 <li><a href="FaleConosco.html">Fale Conosco</a></li>
+                <div id="icone-carrinho" onclick="window.location.href='carrinho.html'">
+                    <img src="../img/icones/icons8-carrinho-de-compras-60.png" alt="Carrinho" >
+                    <span id="contador-carrinho">0</span>
+                </div>
             </ul>
         </nav>
     </header>
     <main>
-        <form action="#" method="POST">
+        <form action="" method="POST">
             <label for="assunto">ASSUNTO <span style="color: red;">*</span></label>
             <select id="assunto" name="assunto" required>
                 <option value="" disabled selected>Selecione um assunto</option>
@@ -31,17 +37,19 @@
                 <option value="sugestoes">Sugestões</option>
                 <option value="outros">Outros</option>
             </select>
+        
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>
-
+        
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
-
+        
             <label for="mensagem">Mensagem:</label>
             <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-
+        
             <button type="submit">Enviar</button>
         </form>
+   
     </main>
     <footer>
         <div class="container">
