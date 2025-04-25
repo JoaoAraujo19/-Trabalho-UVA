@@ -76,3 +76,35 @@ function calcularTotal() {
 }
 
 atualizarCarrinho();
+
+function enviarPedido() {
+    if (carrinho.length === 0) {
+        alert("Seu carrinho está vazio!");
+        return;
+    }
+
+    console.log("Enviando dados para o backend");
+
+    fetch('../php/salvar_pedido.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(JSON.parse(localStorage.getItem('carrinho')))
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log("Resposta do servidor:", data);
+        if (data.status === 'success') {
+            alert("Pedido enviado com sucesso!");
+            localStorage.removeItem("carrinho");
+            carrinho = [];
+            window.location.href = "Cardapio.html"; // ou outra página
+        } else {
+            alert("Erro ao enviar pedido.");
+        }
+    })
+    .catch(error => {
+        console.error("Erro na requisição:", error);
+    });
+}
