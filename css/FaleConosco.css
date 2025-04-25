@@ -27,6 +27,19 @@ a{
   color: #5c2d00;
   font-size: 20px;
 }
+/* Botão do menu (hambúrguer) */
+.menu-toggle {
+  background: none;
+  border: none;
+  color: #5c2d00;
+  font-size: 2.5rem;
+  cursor: pointer;
+  display: none;
+  top: 10px;
+  right: 20px; 
+  z-index: 999;
+}
+
 /* Carrinhno */
 #icone-carrinho{
   position: relative; 
@@ -40,7 +53,7 @@ a{
 }
 #contador-carrinho{
   position: absolute;
-  top: -8px; 
+  top: -25px;
   right: -8px; 
   background: red; 
   color: white; 
@@ -76,7 +89,7 @@ form {
     resize: vertical;
   }
   
-  button {
+  button{
     padding: 10px;
     background-color: rgb(255, 51, 0);
     color: white;
@@ -154,6 +167,29 @@ footer .container a:hover{
 
 /* Responsividade */
 @media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+    gap: 20px;
+    background-color: rgb(255, 226, 189);
+    width: 100%;
+    padding: 10px 20px;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .nav-links li {
+    padding: 10px 0;
+  }
   footer{
     background-color: black;
   }

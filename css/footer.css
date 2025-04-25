@@ -15,20 +15,32 @@ header{
     margin: 10px 0px;
     margin-top: 50px;
     margin-bottom: 60px;
-}
-
-ul{
+  }
+  
+  ul{
     list-style: none;
     display: flex;
     gap: 100px;
     
-}
-
-a{
+  }
+  
+  a{
     text-decoration: none;
     color: #5c2d00;
     font-size: 20px;
-}
+  }
+  /* Botão do menu (hambúrguer) */
+  .menu-toggle {
+    background: none;
+    border: none;
+    color: #5c2d00;
+    font-size: 2.5rem;
+    cursor: pointer;
+    display: none;
+    top: 10px;
+    right: 20px; 
+    z-index: 999;
+  }
 /* Fundadores*/
 .container-fundadores {
     display: flex;
@@ -117,6 +129,43 @@ footer .container a:hover{
     opacity: 0.4;
 }
 @media screen and (max-width: 768px) {
+   /* NAV */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        display: none;
+        gap: 20px;
+        background-color: rgb(255, 226, 189);
+        width: 100%;
+        padding: 10px 20px;
+      }
+      .nav-links.show {
+        display: flex;
+      }
+      .nav-links li {
+        padding: 10px 0;
+      }
+      /*Fundadores */
+      .container-fundadores {
+        flex-direction: column;
+        gap: 2rem; 
+    }
+
+    .image-container img {
+        max-width: 100%; 
+    }
+    .text-container {
+        width: 90%; 
+    }
+    /* footer */
     footer .container{
         flex-direction: column;
     }
@@ -124,4 +173,17 @@ footer .container a:hover{
         width: 100%;
         margin-bottom: 30px;
     }
+}
+@media screen and (max-width: 1500px){
+    .container-fundadores {
+        flex-direction: column;
+        gap: 2rem; 
+    }
+
+    .image-container img {
+        max-width: 100%; 
+    }
+    .text-container {
+        width: 90%; 
+    } 
 }

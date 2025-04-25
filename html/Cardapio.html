@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="../img/icones/logoGsemCirculo.png" type="image/x-icon">
         <link rel="stylesheet" href="../css/Cardapio.css">
-        <script defer src="../../index.js"></script>
+        <script defer src="../index.js"></script>
         <script defer src="../js/carrinho.js"></script>
 
         <title>Empresa</title>
@@ -14,19 +14,22 @@
     
     <body>
         <header>
-            <nav>
-                <ul>
-                    <li><a href="../index.html">inicio</a></li>
-                    <li><a href="Cardapio.html">Cardapio</a></li>
-                    <li><a href="Novidades.php">Novidades</a></li>
-                    <li><a href="FaleConosco.html">Fale Conosco</a></li>
-                    <div id="icone-carrinho" onclick="window.location.href='carrinho.html'">
-                        <img src="../img/icones/icons8-carrinho-de-compras-60.png" alt="Carrinho" >
-                        <span id="contador-carrinho">0</span>
-                     </div>
-                </ul>
+            <nav class="navbar">
+              <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+              <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="../html/Cardapio.html">Cardápio</a></li>
+                <li><a href="../html/Novidades.html">Novidades</a></li>
+                <li><a href="../html/FaleConosco.html">Fale Conosco</a></li>
+                <li class="carrinho">
+                  <a href="../html/carrinho.html" id="icone-carrinho">
+                    <img src="../img/icones/icons8-carrinho-de-compras-60.png" alt="Carrinho">
+                    <span id="contador-carrinho">0</span>
+                  </a>
+                </li>
+              </ul>
             </nav>
-        </header>
+          </header>
     <main>
             <div class="carrossel">
                 <div class="list">
@@ -179,6 +182,11 @@
             </ul>
         </div>
     </footer>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+          document.getElementById('nav-links').classList.toggle('show');
+        });
+      </script>
 </body>
 
 </html>
