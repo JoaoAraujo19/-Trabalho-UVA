@@ -14,7 +14,7 @@
                 <ul>
                     <li><a href="../index.html">inicio</a></li>
                     <li><a href="Cardapio.html">Cardapio</a></li>
-                    <li><a href="Novidades.html">Novidades</a></li>
+                    <li><a href="Novidades.php">Novidades</a></li>
                     <li><a href="FaleConosco.html">Fale Conosco</a></li>
                     <div id="icone-carrinho" onclick="window.location.href='carrinho.html'">
                         <img src="../img/icones/icons8-carrinho-de-compras-60.png" alt="Carrinho" >
@@ -24,7 +24,9 @@
             </nav>
         </header>
     <main>
-       
+       <?php
+        include("../php/novidades.php");
+       ?>
     </main>
     <footer>
         <div class="container">
