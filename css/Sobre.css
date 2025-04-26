@@ -1,19 +1,36 @@
-*{
-    margin: 0px 0px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --bg-color: #f5ebdc;
+  --second-bg-color: #ffffff;
+  --text-color: #ff3300;
+
 }
 /* Background*/
 body{
-    background-color: rgb(255, 226, 189);
-    
+  background: var(--second-bg-color);
+  
 }
 /* NavBar */
-header{
-    display: flex;
-    justify-content: center;
-    margin: 10px 0px;
-    margin-top: 50px;
-    margin-bottom: 60px;
-  }
+header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--bg-color);
+  padding: 4rem 12% 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+} 
   
   ul{
     list-style: none;
@@ -26,6 +43,27 @@ header{
     text-decoration: none;
     color: #5c2d00;
     font-size: 20px;
+  }
+  /* Carrinhno */
+  #icone-carrinho{
+    position: relative; 
+    cursor: pointer;
+    margin-left: 50px;
+  }
+  #icone-carrinho img{
+    width: 40px;
+    height: auto;
+  
+  }
+  #contador-carrinho{
+    position: absolute;
+    top: -25px;
+    right: -8px; 
+    background: red; 
+    color: white; 
+    border-radius: 50%; 
+    padding: 2px 6px; 
+    font-size: 12px;
   }
   /* Botão do menu (hambúrguer) */
   .menu-toggle {
@@ -103,7 +141,7 @@ footer .container a:hover{
         align-items: flex-start;
         display: none;
         gap: 20px;
-        background-color: rgb(255, 226, 189);
+        background:var(--second-bg-color);
         width: 100%;
         padding: 10px 20px;
       }

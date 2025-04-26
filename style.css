@@ -1,20 +1,35 @@
-*{
-    margin: 0px 0px;
-}
-/* Background*/
-body{
-    background-color: rgb(255, 226, 189);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+  }
+  :root {
+    --bg-color: #f5ebdc;
+    --second-bg-color: #ffffff;
+    --text-color: #ff3300;
+  
+  }
+  /* Background*/
+  body{
+    background: var(--second-bg-color);
     
-}
-/* NavBar */
-header{
+  }
+  /* NavBar */
+  header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--bg-color);
+    padding: 4rem 12% 4rem;
     display: flex;
     justify-content: center;
-    margin: 10px 0px;
-    margin-top: 50px;
-    margin-bottom: 60px;
+    align-items: center;
   }
-  
   ul{
     list-style: none;
     display: flex;
@@ -215,6 +230,7 @@ footer .container a:hover{
     }
     .carrossel {
         height: 400px;
+        
     }
     footer .container{
         flex-direction: column;
