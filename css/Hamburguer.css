@@ -1,12 +1,36 @@
 * {
-    margin: 20px 20px;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --bg-color: #f5ebdc;
+  --second-bg-color: #ffffff;
+  --text-color: #ff3300;
+
+}
+/* Background*/
+body{
+  background: var(--second-bg-color);
   
-  /* Background*/
-  body {
-    background-color: rgb(255, 226, 189);
-  }
+}
+/* NavBar */
+header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--bg-color);
+  padding: 4rem 12% 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
+} 
 /* Discrição Hamburguer */
 .container-chapa-quente {
     display: flex;
