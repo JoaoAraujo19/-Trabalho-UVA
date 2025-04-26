@@ -16,7 +16,7 @@
 }
 /* Background*/
 body{
-  background: var(--second-bg-color);
+  background: var(--bg-color);
   
 }
 /* NavBar */
@@ -36,7 +36,7 @@ header {
     display: flex;
     flex-direction: column; 
     font-family: sans-serif; 
-    background-color: rgb(255, 226, 189);
+    background-color:var(--bg-color);
     padding: 20px;
   }
   

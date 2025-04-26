@@ -160,7 +160,7 @@ footer .container a:hover{
         align-items: flex-start;
         display: none;
         gap: 20px;
-        background-color: rgb(255, 226, 189);
+        background-color: var(--bg-color);
         width: 100%;
         padding: 10px 20px;
       }

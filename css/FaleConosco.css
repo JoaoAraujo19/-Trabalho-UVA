@@ -195,7 +195,7 @@ footer .container a:hover{
     align-items: flex-start;
     display: none;
     gap: 20px;
-    background: var(--second-bg-color);
+    background: var(--bg-color);
     width: 100%;
     padding: 10px 20px;
   }
