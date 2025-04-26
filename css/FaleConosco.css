@@ -124,10 +124,7 @@ form {
     background-color: #fff;
     appearance: none;
   }
-  
-  button:hover {
-    background-color: #a00000;
-  }
+
   /* footer */
   footer{
     background-color: black;
