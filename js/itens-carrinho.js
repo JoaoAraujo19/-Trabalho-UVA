@@ -22,7 +22,8 @@ function atualizarCarrinho() {
         const linha = document.createElement("div");
         linha.innerHTML = `
             ${item.nome} x ${item.quantidade} — R$ ${(precos[item.nome] * item.quantidade).toFixed(2)}
-            <button onclick="remover('${item.nome}')">Remover</button>
+            <img onclick="remover('${item.nome}')" src="../img/icones/BUTTONmenosICON.png" alt="">
+            
         `;
         container.appendChild(linha);
         total += (precos[item.nome] || 0) * item.quantidade;

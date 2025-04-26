@@ -172,6 +172,7 @@ transition: 0.5s;
   transform: scale(1.1);
 }
 
+
 /* Box Hamburguer */
 h1 {
   color: #ff3300;
@@ -192,7 +193,6 @@ h1 {
   background: #f6eee7;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
   flex-basis: calc(33.33% - 2.5rem);
   min-width: 250px;
   height: auto;
@@ -211,7 +211,6 @@ h1 {
   object-fit: cover;
   
 }
-
 
 .card h3 {
   margin-top: 10px;
@@ -339,7 +338,7 @@ footer .container a:hover{
     align-items: flex-start;
     display: none;
     gap: 20px;
-    background: var(--second-bg-color);
+    background: var(--bg-color);
     width: 100%;
     padding: 10px 20px;
   }
